@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root {
+    --blanco: #fff;
+    --azul: rgb(61, 43, 173);
+    --celeste: rgb(41, 170, 239);
+    --negro: #000;
+    --bg:#425fa4;
+}
+body
+{
+    background-color: var(--bg);
+}
+.titulo {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.subtitulo {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.parrafo {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.menu {
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+/*Cabecera*/
+.cabecera
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px ;
+    background-color: var(--celeste);
+}
+.cabecera_redes
+{
+    width: 100%;
+    border: solid 1px black;
+    display: flex;
+    justify-content: center;
+    background-color: var(--azul);
+}
+.cabecera_redes_mid
+{
+    width: 80%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.cabecera_redes_mid i 
+{
+    margin: 0 10px;
+    color: var(--blanco);
+}
+
+.cabecera_content
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco);
+}
+.cabecera_content_mid
+{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecera_content_mid a
+{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    color: var(--celeste);
+}
+.cabecera_content_mid img
+{
+    height: 100%;
+}
+.slider_button
+{
+    width: 6vh;
+    height: 6vh;
+    background-color: var(--celeste);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.line
+{
+    width: 80%;
+    height: 5%;
+    background-color: var(--blanco);
+}
+.buscador 
+{
+    padding: 10px 0;
+}
+.buscador input
+{
+    width: 300px;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid var(--blanco);
+    padding: 5px;
+}
+.buscador button
+{
+    color: var(--celeste);
+    outline: none;
+    border: solid 1px var(--blanco);
+    background-color: var(--blanco);
+    padding: 5px;
+}
+/*principal*/
+.principal
+{
+    margin-top:25vh;
+    padding: 10px;
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*inicio*/
+.inicio
+{
+    max-width: 900px;
+    min-width: 320px;
+    background-color: var(--negro);
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(3,300px);
+    gap: 1px;
+    grid-template-areas: 
+    "des1 des1 des2"
+    "des1 des1 des3"
+    "des4 des5 des6";
+}
+.d1
+{
+    grid-area: des1;
+}
+.destacado
+{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:910px) 
+{
+    .inicio
+    {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,300px);
+        grid-template-areas: 
+        "des1 des1"
+        "des1 des1"
+        "des2 des2"
+        "des3 des4"
+        "des5 des6";
+    }
+    .d2
+    {
+        grid-area: des2;
+    }
+}
+/*categorias*/
+.categorias
+{
+    width: 80%;
+    margin: 5vh 0;
+    background-color: var(--blanco);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.cat
+{
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img_cat
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 1px var(--negro);
+    margin-bottom: 10px;
+}
+/*productos*/
+.productos
+{
+    margin: 2vh 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--blanco);
+}
+.conteiner_productos
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.producto
+{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    box-shadow: 0 0 10px var(--negro);
+    background-color: var(--celeste);
+}
